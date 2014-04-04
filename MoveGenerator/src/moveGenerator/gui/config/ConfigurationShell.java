@@ -8,10 +8,8 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.Text;
 
 /**
  * Configuration shell, window where settings will be set.
@@ -39,8 +37,8 @@ public class ConfigurationShell {
 	public void initialize() {
 		configShell = new Shell(parent, SWT.DIALOG_TRIM | SWT.APPLICATION_MODAL);
 
-		int size_x = 600;
-		int size_y = 500;
+		int size_x = 400;
+		int size_y = 150;
 		configShell.setSize(size_x, size_y);
 		int x = (parent.getBounds().x + parent.getBounds().width - size_x) / 2;
 		int y = (parent.getBounds().y + parent.getBounds().height - size_y) / 2;
@@ -55,7 +53,7 @@ public class ConfigurationShell {
 		arduinoConfig = new ArduinoConfig(configShell, SWT.NONE);
 
 		// Servos Configuration Group
-		servosConfig = new ServosConfig(configShell, SWT.NONE);
+		//servosConfig = new ServosConfig(configShell, SWT.NONE);
 
 		// BUTTONS
 		new Label(configShell, SWT.NONE);
